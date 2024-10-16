@@ -1,0 +1,22 @@
+<!-- <zxing-scanner
+      [formats]="allowedFormats"
+      (scanSuccess)="onScanSuccess($event)"
+    ></zxing-scanner>
+    @if(scannedData){
+      <div >
+        <h2>Datos escaneados:</h2>
+        <p>{{ scannedData }}</p>
+        <p>DNI extraído: {{ extractedDni }}</p>
+      </div>
+    }
+     -->
+
+<div>
+  <input type="file" (change)="onFileSelected($event)" accept="image/*">
+  <canvas #canvas hidden></canvas>
+  @if(scannedData){
+  <h2>Datos escaneados:</h2>
+  <p>{{ scannedData }}</p>
+  <p>DNI extraído: {{ extractedDni }}</p>
+}
+</div>
